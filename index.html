@@ -1,9 +1,474 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Git Demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TicketBook - Online Ticket Booking</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Welcome to Git</h1>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                🎟 TicketBook
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#movies">Movies</a>
+                </li>
+
+                <li>
+                    <a href="#booking">Book Tickets</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HOME SECTION ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="welcome-text">
+                WELCOME TO TICKETBOOK
+            </p>
+
+            <h1>
+                Book Your Tickets Easily
+            </h1>
+
+            <p>
+                Discover movies, choose your seats,
+                and book your tickets online.
+            </p>
+
+            <button class="main-button" onclick="scrollToMovies()">
+                Book Now
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MOVIES SECTION ================= -->
+
+    <section class="movies" id="movies">
+
+        <h2>Now Showing</h2>
+
+        <p class="section-description">
+            Choose your favorite movie and book your tickets.
+        </p>
+
+
+        <div class="movie-container">
+
+
+            <!-- MOVIE 1 -->
+
+            <div class="movie-card">
+
+                <img
+                    src="images/avengers.jpg"
+                    alt="Avengers Movie"
+                >
+
+                <div class="movie-info">
+
+                    <h3>Avengers</h3>
+
+                    <p>
+                        Action | Adventure
+                    </p>
+
+                    <p class="movie-price">
+                        ₹200 per ticket
+                    </p>
+
+                    <button
+                        class="movie-button"
+                        onclick="selectMovie('Avengers')"
+                    >
+                        Book Ticket
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- MOVIE 2 -->
+
+            <div class="movie-card">
+
+                <img
+                    src="images/inception.jpg"
+                    alt="Inception Movie"
+                >
+
+                <div class="movie-info">
+
+                    <h3>Inception</h3>
+
+                    <p>
+                        Sci-Fi | Thriller
+                    </p>
+
+                    <p class="movie-price">
+                        ₹180 per ticket
+                    </p>
+
+                    <button
+                        class="movie-button"
+                        onclick="selectMovie('Inception')"
+                    >
+                        Book Ticket
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- MOVIE 3 -->
+
+            <div class="movie-card">
+
+                <img
+                    src="images/interstellar.jpg"
+                    alt="Interstellar Movie"
+                >
+
+                <div class="movie-info">
+
+                    <h3>Interstellar</h3>
+
+                    <p>
+                        Sci-Fi | Drama
+                    </p>
+
+                    <p class="movie-price">
+                        ₹220 per ticket
+                    </p>
+
+                    <button
+                        class="movie-button"
+                        onclick="selectMovie('Interstellar')"
+                    >
+                        Book Ticket
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BOOKING SECTION ================= -->
+
+    <section class="booking" id="booking">
+
+        <h2>Select Your Seats</h2>
+
+        <p class="section-description">
+            Select a movie and choose your preferred seats.
+        </p>
+
+
+        <!-- SCREEN -->
+
+        <div class="screen">
+            SCREEN
+        </div>
+
+
+        <!-- SEAT AREA -->
+
+        <div class="seats">
+
+
+            <!-- ROW A -->
+
+            <div class="seat-row">
+
+                <button class="seat" onclick="selectSeat(this)">A1</button>
+                <button class="seat" onclick="selectSeat(this)">A2</button>
+                <button class="seat" onclick="selectSeat(this)">A3</button>
+                <button class="seat" onclick="selectSeat(this)">A4</button>
+                <button class="seat" onclick="selectSeat(this)">A5</button>
+                <button class="seat" onclick="selectSeat(this)">A6</button>
+
+            </div>
+
+
+            <!-- ROW B -->
+
+            <div class="seat-row">
+
+                <button class="seat" onclick="selectSeat(this)">B1</button>
+                <button class="seat" onclick="selectSeat(this)">B2</button>
+                <button class="seat" onclick="selectSeat(this)">B3</button>
+                <button class="seat" onclick="selectSeat(this)">B4</button>
+                <button class="seat" onclick="selectSeat(this)">B5</button>
+                <button class="seat" onclick="selectSeat(this)">B6</button>
+
+            </div>
+
+
+            <!-- ROW C -->
+
+            <div class="seat-row">
+
+                <button class="seat" onclick="selectSeat(this)">C1</button>
+                <button class="seat" onclick="selectSeat(this)">C2</button>
+                <button class="seat" onclick="selectSeat(this)">C3</button>
+                <button class="seat" onclick="selectSeat(this)">C4</button>
+                <button class="seat" onclick="selectSeat(this)">C5</button>
+                <button class="seat" onclick="selectSeat(this)">C6</button>
+
+            </div>
+
+
+            <!-- ROW D -->
+
+            <div class="seat-row">
+
+                <button class="seat" onclick="selectSeat(this)">D1</button>
+                <button class="seat" onclick="selectSeat(this)">D2</button>
+                <button class="seat" onclick="selectSeat(this)">D3</button>
+                <button class="seat" onclick="selectSeat(this)">D4</button>
+                <button class="seat" onclick="selectSeat(this)">D5</button>
+                <button class="seat" onclick="selectSeat(this)">D6</button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SEAT LEGEND -->
+
+        <div class="seat-legend">
+
+            <div>
+                <span class="legend-box available"></span>
+                Available
+            </div>
+
+            <div>
+                <span class="legend-box selected"></span>
+                Selected
+            </div>
+
+        </div>
+
+
+        <!-- ================= BOOKING SUMMARY ================= -->
+
+        <div class="booking-summary">
+
+            <h2>Booking Summary</h2>
+
+            <div class="summary-item">
+
+                <span>Movie:</span>
+
+                <strong id="selected-movie">
+                    None
+                </strong>
+
+            </div>
+
+
+            <div class="summary-item">
+
+                <span>Seats:</span>
+
+                <strong id="selected-seats">
+                    None
+                </strong>
+
+            </div>
+
+
+            <div class="summary-item">
+
+                <span>Tickets:</span>
+
+                <strong id="ticket-count">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="total">
+
+                <span>Total Price:</span>
+
+                <strong>
+                    ₹<span id="total-price">0</span>
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CUSTOMER DETAILS ================= -->
+
+    <section class="customer-details">
+
+        <h2>Enter Your Details</h2>
+
+        <p class="section-description">
+            Enter your details to complete your booking.
+        </p>
+
+
+        <form id="booking-form">
+
+
+            <div class="form-group">
+
+                <label for="name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+
+            </div>
+
+
+            <button type="submit" class="confirm-button">
+                Confirm Booking
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= CONFIRMATION ================= -->
+
+    <section class="confirmation" id="confirmation">
+
+        <div class="confirmation-box">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h2>
+                Booking Confirmed!
+            </h2>
+
+            <p id="confirmation-message">
+                Your ticket has been booked successfully.
+            </p>
+
+            <button onclick="resetBooking()">
+                Book Another Ticket
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer id="contact">
+
+        <div class="footer-content">
+
+            <h3>
+                🎟 TicketBook
+            </h3>
+
+            <p>
+                Your simple online ticket booking system.
+            </p>
+
+            <p>
+                © 2026 TicketBook. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
